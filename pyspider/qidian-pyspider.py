@@ -12,7 +12,7 @@ class Handler(BaseHandler):
 
     @every(minutes=24 * 60)
     def on_start(self):
-        self.crawl('https://www.qidian.com/all?orderId=8&style=1&pageSize=20&siteid=1&pubflag=0&hiddenField=0&page=2513', callback=self.index_page)
+        self.crawl('https://www.qidian.com/all?orderId=8&style=1&pageSize=20&siteid=1&pubflag=0&hiddenField=0&page=1', callback=self.index_page)
 
     @config(age=10 * 24 * 60 * 60)
     def index_page(self, response):
